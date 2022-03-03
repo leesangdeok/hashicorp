@@ -1,0 +1,15 @@
+/* host: 10.20.3.236 */
+{
+  "server": true,
+  "node_name": "consul_s",
+  "datacenter": "dc_s",
+  "data_dir": "/home/consul/data_standalone",
+  "bind_addr": "10.20.3.236",
+  "client_addr": "0.0.0.0",
+  "advertise_addr": "10.20.3.236",
+  "bootstrap_expect": 1,
+  "ui": true,
+  "log_level": "DEBUG",
+  "enable_syslog": true,
+  "acl_enforce_version_8": false
+}
