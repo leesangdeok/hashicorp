@@ -1,0 +1,16 @@
+/* host: 10.20.3.51 */
+{
+  "server": true,
+  "node_name": "consul_s2",
+  "datacenter": "dc1",
+  "data_dir": "/home/consul/data",
+  "bind_addr": "10.20.3.51",
+  "client_addr": "0.0.0.0",
+  "advertise_addr": "10.20.3.51",
+  "bootstrap_expect": 3,
+  "retry_join": ["10.20.3.236", "10.20.3.51", "10.20.3.232"],
+  "ui": true,
+  "log_level": "DEBUG",
+  "enable_syslog": true,
+  "acl_enforce_version_8": false
+}
