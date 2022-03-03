@@ -1,3 +1,4 @@
+# host: 10.20.3.125
 listener "tcp" {
   address          = "0.0.0.0:8200"
   cluster_address  = "10.20.3.125:8201"
