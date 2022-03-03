@@ -24,6 +24,7 @@ CREATE INDEX parent_path_idx ON vault_kv_store (parent_path);
 ```
 
 * cmd
+```
 # run vault server
 $ vault server -config ./config.hcl
 
