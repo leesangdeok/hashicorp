@@ -1,0 +1,12 @@
+/* host: 10.20.3.136 */
+{
+  "server": false,
+  "datacenter": "dc1",
+  "node_name": "client3",
+  "data_dir": "/home/consul/data",
+  "bind_addr": "10.20.3.136",
+  "client_addr": "127.0.0.1",
+  "retry_join": ["10.20.3.236", "10.20.3.51", "10.20.3.232"],
+  "log_level": "DEBUG",
+  "enable_syslog": true
+}
