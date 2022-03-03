@@ -1,4 +1,4 @@
-// host: 10.20.3.226
+/* host: 10.20.3.226 */
 {
   "server": false,
   "datacenter": "dc_s",
