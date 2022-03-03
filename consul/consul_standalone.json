@@ -1,0 +1,12 @@
+{
+  "server": false,
+  "datacenter": "dc_s",
+  "node_name": "client_s",
+  "data_dir": "/home/consul/data_standalone",
+  "bind_addr": "10.20.3.226",
+  "client_addr": "127.0.0.1",
+  "retry_join": ["10.20.3.236"],
+  "retry_join_wan": ["dc2_s"],
+  "log_level": "DEBUG",
+  "enable_syslog": true
+}
