@@ -22,7 +22,7 @@ $ sudo chmod -R 775 /var/lib/consul
 ```
 
 ### consul server
-* run agent
+* run server
 ```shell
 # standalone
 $ /usr/local/bin/consul agent -config-file=/home/consul/consul_standalone.json -log-file=/home/consul/logs_standalone/
@@ -37,15 +37,24 @@ $ /usr/local/bin/consul agent -config-file=/home/consul/consul_s2.json -log-file
 $ /usr/local/bin/consul agent -config-file=/home/consul/consul_s3.json -log-file=/home/consul/logs/ &
 ```
 
+* cmd
+```shell
+$ consul members -wan
+
+$ consul members
+
+$ consul catalog nodes
+```
+
 ### consul agent
 * run agent
 ```shell
 # agent1
-$ /usr/local/bin/consul agent -config-file=/home/consul/consul_c1.json >> ./logs/consul_client_`date "+%Y%m%d"`.log &
+$ /usr/local/bin/consul agent -config-file=/home/consul-agent/consul_c1.json >> ./logs/consul_client_`date "+%Y%m%d"`.log &
 # agent2
-$ /usr/local/bin/consul agent -config-file=/home/consul/consul_c2.json >> ./logs/consul_client_`date "+%Y%m%d"`.log &
+$ /usr/local/bin/consul agent -config-file=/home/consul-agent/consul_c2.json >> ./logs/consul_client_`date "+%Y%m%d"`.log &
 # agent3
-$ /usr/local/bin/consul agent -config-file=/home/consul/consul_c2.json >> ./logs/consul_client_`date "+%Y%m%d"`.log &
+$ /usr/local/bin/consul agent -config-file=/home/consul-agent/consul_c2.json >> ./logs/consul_client_`date "+%Y%m%d"`.log &
 ```
 
 ## vault
