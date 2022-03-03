@@ -1,21 +1,16 @@
-ui=true
+storage "postgresql" {
+    connection_url = "postgres://postgres:postgres!@127.0.0.1:5432/postgres?sslmode=disable"
+}
+# Write and manage secrets in key-value secrets engine
+path "secret*" {
+  capabilities = [ "create", "read", "update", "delete", "list" ]
+}
+# To enable secrets engines
+path "sys/mounts/*" {
+  capabilities = [ "create", "read", "update", "delete" ]
+}
 listener "tcp" {
-  address          = "0.0.0.0:8200"
-  tls_disable      = "true"
+  #address = "0.0.0.0:8200"
+  address = "127.0.0.1:8200"
+  tls_disable = 1
 }
-
-storage "consul" {
-  address = "127.0.0.1:8500"
-  path    = "vault/"
-}
-
-api_addr = "http://10.20.3.26:8200"
-cluster_addr = "https://10.20.3.226:8201"
-disable_mlock = true
-
-telemetry {
-  prometheus_retention_time = "30s"
-  disable_hostname = true
-}
-
-log_level = "Debug"
